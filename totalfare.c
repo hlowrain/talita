@@ -8,7 +8,12 @@ int main(){
     if (distance > 250){
         int temp = distance;
         temp -= 250;
-        cost = ((temp/250) * (2.50)) + 40;
+        if ((temp/250) >= 1){
+            cost = ((temp/250) * (2.50)) + 40;
+        }
+        else{
+            cost = 40;
+        }
     }
     else{
         cost = 40;
